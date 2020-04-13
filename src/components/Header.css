@@ -3,8 +3,14 @@
     width: 100%;
     padding: 50px 0;
     z-index: 100;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
     
+}
 
+.HeaderScrolled{
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    backdrop-filter: blur(20px);
 }
 
 .HeaderGroup{
@@ -32,7 +38,14 @@
     outline: none;
     cursor: pointer;
     font-family: 'Cairo', sans-serif;
+    transition: 1s  cubic-bezier(0.2, 0.8, 0.2, 1);;
 
+}
+
+.Header button:hover{
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
 }
 
 @media(max-width: 640px){
