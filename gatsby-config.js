@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'عالم أوزون ميديا',
   },
   plugins: ['gatsby-plugin-react-helmet'],
 }
