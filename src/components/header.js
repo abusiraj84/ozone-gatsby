@@ -32,11 +32,11 @@ handleScroll = (event) => {
     return (
       <div className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}>
         <div className="HeaderGroup">
-          <Link to="/"><img src={require('../images/logo-designcode.svg')} width="30" /></Link>
-          <Link to="/courses">الدورات</Link>
-          <Link to="/downloads">التحميل</Link>
-          <Link to="/workshops">الورشات</Link>
-          <Link to="/buy"><button>أطلب الآن</button></Link>
+          <Link to="/"><img src={require('../images/logo-aljazeera.png')} width="150" /></Link>
+          <Link to="/courses">من نحن</Link>
+          <Link to="/downloads">تواصل معنا</Link>
+          <Link to="/workshops">رسالتنا</Link>
+          <Link to="/buy"><button>اطلب خدمة</button></Link>
         </div>
       </div>
     )

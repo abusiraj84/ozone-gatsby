@@ -25,20 +25,28 @@
 .Header a{
     color:white;
     font-weight: 700;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
+}
+
+.Header a:hover{
+   
+    transform: translateY(-3px);
+    color :#491473;
 }
 
 .Header button{
     padding: 8px 20px;
-    font-size: 20px;
-    background: #56CCF2;
+    font-size: 13px;
+    background: #491473;
     border: none;
     font-weight: 700;
     border-radius: 10px;
     outline: none;
+    color: white;
     cursor: pointer;
     font-family: 'Cairo', sans-serif;
-    transition: 1s  cubic-bezier(0.2, 0.8, 0.2, 1);;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
 }
 
@@ -46,6 +54,7 @@
     background: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     transform: translateY(-3px);
+    color :#491473;
 }
 
 @media(max-width: 640px){

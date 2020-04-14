@@ -16,17 +16,19 @@ a{
 }
 
 .Hero{
-  background-image: url('../images/wallpaper3.jpg');
+
+  background-image: url('../images/wallpaper5.jpeg');
   height: 920px;
   background-size: cover;
   background-position: center;
   position: relative;
+
 }
 
 .HeroGroup{
   margin: 0 auto;
   max-width: 500px;
-  padding: 150px 50px;
+  padding: 200px 50px;
   text-align: center;
 }
 
@@ -34,7 +36,7 @@ a{
   margin: 0;
   color: white;
   font-size: 60px;
-  line-height: 1.4;
+  line-height: 1.٣;
   opacity: 0;
   animation: HeroAnimation;
   animation-duration: 3s;
@@ -47,7 +49,7 @@ a{
 .Hero p{
   color: rgba(255, 255, 255, 0.8);
   font: 30px;
-  line-height: 1.5;
+  line-height: 1.7;
   animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
   opacity: 0;
 }
@@ -57,7 +59,7 @@ a{
   font-weight: 600;
   color: white;
   text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.7);
+  background: #3a0c5fc9;
   padding: 9px 20px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
@@ -121,6 +123,8 @@ a{
   }
 }
 
+
+
 .Cards h2{
   margin: 50px 20px;
   font-size: 60px;
@@ -133,7 +137,8 @@ a{
 }
 
 .CardGroup{
-  margin: 50px 40px 100px;
+  margin: 50px auto;
+  max-width: 1040px;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 40px;
