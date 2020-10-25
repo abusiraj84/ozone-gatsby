@@ -1,41 +1,194 @@
-.Header{
+.Header {
     position: fixed;
     width: 100%;
     padding: 50px 0;
     z-index: 100;
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-    
 }
 
-.HeaderScrolled{
+.HeaderScrolled {
     background: rgba(0, 0, 0, 0.8);
-    padding: 15px 0;
+    padding: 0px 0;
     backdrop-filter: blur(20px);
+    top: 0;
+    right: 0;
 }
 
-.HeaderGroup{
+.off {
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    transform: rotate(360deg);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+}
+
+.on {
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+}
+
+.all-info {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+    z-index: 999;
+    direction: ltr;
+}
+
+.all-info:hover {
+    transform: translateY(-20px);
+}
+
+.info {
+    height: 510px;
+    width: 363px;
+    background: #5d0ea7;
+    border-radius: 20px;
+    margin-left: 20px;
+    opacity: 0;
+    animation: HeroAnimation;
+    animation-duration: 0.5s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.info-no {
+    height: 512px;
+    width: 363px;
+    background: #5d0ea7;
+    border-radius: 20px;
+    margin-left: 20px;
+    opacity: 1;
+    animation: HeroAnimation-no;
+    animation-duration: 0.5s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes HeroAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes HeroAnimation-no {
+    0% {
+        opacity: 100;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.all-info h3 {
+    direction: rtl;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bubble {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background: #5d0ea7;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.ThemeSwitcher {
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    margin-top: 10px;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    z-index: 101;
+    padding: 50px 10px;
+    transition: padding 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+}
+
+.ThemeSwitcherScrolled {
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    margin-top: 10px;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    z-index: 101;
+    padding: 10px;
+    transition: padding 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+}
+
+@media (min-width: 1100px) {
+    .ThemeSwitcher {
+        right: 50px;
+    }
+    .ThemeSwitcherScrolled {
+        right: 50px;
+    }
+}
+
+.ThemeSwitcher img {
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+}
+
+.HeaderGroup {
     max-width: 800px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(5,auto);
+    grid-template-columns: repeat(5, auto);
     align-items: center;
     justify-items: center;
 }
 
-.Header a{
-    color:white;
+.Header a {
+    color: white;
     font-weight: 700;
     transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-
 }
 
-.Header a:hover{
-   
+.Header a:hover {
     transform: translateY(-3px);
-    color :#491473;
+    color: #491473;
 }
 
-.Header button{
+.Header .link {
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+
+.Header .link:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.Header button {
     padding: 8px 20px;
     font-size: 13px;
     background: #491473;
@@ -47,25 +200,23 @@
     cursor: pointer;
     font-family: 'Cairo', sans-serif;
     transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-
 }
 
-.Header button:hover{
+.Header button:hover {
     background: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     transform: translateY(-3px);
-    color :#491473;
+    color: #491473;
 }
 
-@media(max-width: 640px){
-    .Header{
+@media(max-width: 640px) {
+    .Header {
         padding: 15px 0;
     }
-
-    .HeaderGroup{
+    .HeaderGroup {
         grid-template-columns: repeat(4, auto);
     }
-    .Header a:nth-child(4){
+    .Header a:nth-child(4) {
         display: none;
     }
 }

@@ -1,0 +1,66 @@
+.Post{
+    width: 484px;
+    height: 325px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .25);
+    display: -ms-grid;
+    display: grid;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    -ms-grid-columns: auto 40px;
+    grid-template-columns: auto 40px;
+    -ms-grid-rows: 50% auto;
+    grid-template-rows: 50% auto;
+
+}
+
+.Post:hover{
+    transform: scale(1.1,1.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    
+}
+
+.Post:hover img{
+    transform: translateY(-20px);
+  
+}
+
+.Post img{
+    position: absolute;
+    top: 0;
+    height: 110%;
+    width: 100%;
+    z-index: -1;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    
+}
+
+.Post h3{
+    color: white;
+    font-size: 20px;
+    margin: 20px 20px 0 0px;
+    width: 190px;
+}
+
+.Post span{
+    color: white;
+    font-size: 18px;
+    margin: 20px -52px 97px 12px;
+    background: #0095ff;
+    padding: 12px;
+    text-align: center;
+    font-weight: 800;
+    border-radius: 20px;
+}
+
+.Post p{
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 1.6;
+    font-weight: 700;
+    margin: 0px 20px 20px 0px;
+    align-self: end;
+
+}
